@@ -1,67 +1,55 @@
-# 🌤 Weatherly — React Weather App
+# 🌤 Weatherly — Full-Stack Weather App
 
-A production-grade weather app built with React + Vite, powered by WeatherAPI.com via RapidAPI. The API key is stored securely as a Vercel environment variable — never exposed to the browser.
+A modern full-stack weather application that provides real-time weather insights, 7-day forecasts, hourly breakdowns, and air quality data. Built with React (Vite) and a secure Node.js API proxy to protect sensitive API keys.
 
 ---
 
-## 🚀 Deploying to Vercel (Step by Step)
+## 🔗 Live Demo
+👉 https://weatherly-q0gocgd3j-medhanshkhurana2-1900s-projects.vercel.app
 
-### Step 1 — Add your API key to `.env.local`
-Open `.env.local` and replace the placeholder with your real key:
-```
-RAPIDAPI_KEY=your_actual_key_here
-```
-Get a free key at [rapidapi.com/weatherapi/api/weatherapi-com](https://rapidapi.com/weatherapi/api/weatherapi-com) — free tier: 1M calls/month.
+---
 
-### Step 2 — Push to GitHub
-```bash
-git init
-git add .
-git commit -m "Initial commit - Weatherly"
-```
-Create a new repo on GitHub, then:
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/weatherly.git
-git push -u origin main
-```
 
-### Step 3 — Deploy on Vercel
-1. Go to [vercel.com](https://vercel.com) → **New Project** → Import your GitHub repo
-2. Vercel auto-detects Vite — leave all build settings as default
-3. Before deploying, click **Environment Variables** and add:
-   - **Name:** `RAPIDAPI_KEY`
-   - **Value:** your RapidAPI key
-4. Click **Deploy** ✅
 
-Your site is live. The API key is hidden on Vercel's servers and never reaches the browser.
+## 🛠 Tech Stack
+
+- **Frontend:** React (Vite)
+- **Backend:** Node.js (API proxy)
+- **API:** WeatherAPI (via RapidAPI)
+- **Deployment:** Vercel
+- **Styling:** CSS / Tailwind
+
+---
+
+## ✨ Features
+
+- 🌡️ Real-time weather with °C / °F toggle  
+- 📅 7-day forecast with rain probability  
+- ⏱️ 24-hour hourly weather breakdown  
+- 🌬️ Wind, humidity, pressure, visibility, UV index  
+- 🌅 Sunrise & sunset tracking  
+- 🌿 Air Quality Index (AQI) with pollutant details  
+- 🎨 Dynamic UI backgrounds based on weather conditions  
+- 📍 Location-based weather using geolocation  
+- 🔒 Secure API handling via backend proxy (no key exposure)
+
+---
+
+## ⚙️ How It Works
+
+- Frontend sends requests to `/api/weather`
+- Backend (Node.js server) acts as a proxy
+- API key is securely attached on the server side
+- Data is fetched from WeatherAPI via RapidAPI
+- Response is returned to the frontend
+
+This ensures the API key is never exposed in the browser.
 
 ---
 
 ## 💻 Running Locally
 
-You need **two terminals**:
-
-**Terminal 1 — Start the API proxy:**
+Clone the repository:
 ```bash
-node dev-server.js
-```
-
-**Terminal 2 — Start Vite:**
-```bash
-npm run dev
-```
-
-Open `http://localhost:5173`
-
----
-
-## Features
-- 🌡️ Live temperature with °C / °F toggle
-- 📅 7-day forecast with rain probability
-- ⏱️ 24-hour hourly breakdown
-- 🌬️ Wind, humidity, pressure, visibility, UV index, dew point, gust
-- 🌅 Sunrise / sunset progress bar
-- 🌿 Air quality index with 6 pollutants
-- 🎨 Dynamic animated backgrounds (sunny, rainy, cloudy, snowy, stormy)
-- 📍 GPS geolocation support
-- 🔒 API key secured via Vercel serverless function
+git clone https://github.com/YOUR_USERNAME/weatherly.git
+cd weatherly
