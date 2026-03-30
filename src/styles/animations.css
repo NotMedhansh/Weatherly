@@ -1,0 +1,42 @@
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  33%       { transform: translateY(-12px) rotate(4deg) scale(1.04); }
+  66%       { transform: translateY(-6px) rotate(-2deg) scale(1.02); }
+}
+@keyframes spinLoader {
+  to { transform: rotate(360deg); }
+}
+@keyframes twinkle {
+  from { opacity: var(--star-min, 0.08); transform: scale(1); }
+  to   { opacity: var(--star-max, 0.55); transform: scale(1.5); }
+}
+@keyframes rainFall {
+  to { transform: translateY(110vh) translateX(-28px); opacity: 0; }
+}
+@keyframes snowFall {
+  to { transform: translateY(110vh) translateX(var(--drift, 0px)); opacity: 0; }
+}
+@keyframes driftCloud {
+  from { transform: translateX(-250px); }
+  to   { transform: translateX(calc(100vw + 250px)); }
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 var(--blue-glow), 0 0 8px var(--blue); }
+  50%       { box-shadow: 0 0 0 8px transparent, 0 0 22px var(--blue); }
+}
+@keyframes toastIn {
+  from { transform: translateX(-50%) translateY(60px); opacity: 0; }
+  to   { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+@keyframes toastOut {
+  from { transform: translateX(-50%) translateY(0); opacity: 1; }
+  to   { transform: translateX(-50%) translateY(60px); opacity: 0; }
+}
